@@ -1,0 +1,260 @@
+@import url(./skins/color-1.css);
+/* @import url(./skins/color-2.css);
+@import url(./skins/color-3.css);
+@import url(./skins/color-4.css);
+@import url(./skins/color-5.css); */
+
+/*=====================
+Fonts
+=======================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*=====================
+Global CSS
+=======================
+*/
+
+/* Define custom color for black variablers*/
+:root{
+--bg-black-900:#000;
+--bg-black-100:#ddddd;
+--bg-black-50:#EFF0F4;
+--text-black-900:#000;
+--text-black-700:#555555;
+--text-black-600:#666666;
+--text-black-300:#bbbbbb;
+--outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+--outer-shadow-0:0px 0px 0px #d0d0d0, 0px 0px 0px #f8f8f8;
+--inner-shadow:inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+*:not(i){
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+:before, :after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    background-color: var(--bg-black-50);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.outer-shadow{
+    box-shadow: var(--outer-shadow);
+}
+
+.inner-shadow{
+    box-shadow: var(--inner-shadow);
+}
+
+.hover-in-out{
+    position: relative;
+    z-index: 1;
+}
+
+.hover-in-out:hover{
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hover-in-out:after{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.hover-in-out:hover:after{
+    box-shadow: var(--inner-shadow);
+}
+/*=====================
+Header
+=======================
+*/
+
+.header{
+
+    padding: 20px 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.logo a{
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    color: var(--skin-color);
+   border: 2px solid var(--skin-color);
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.nav-btn{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+ 
+}
+.nav-btn:after{
+    border-radius: 50%;
+}
+
+.nav-btn span{
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: var(--bg-black-900);
+    position: relative;
+}
+
+.nav-btn span:before,
+.nav-btn span:after{
+     content:' ';
+     position : absolute;
+     left:0;
+     width:100%;
+     height:100%;
+     background-color: var(--bg-black-900);
+
+}
+.nav-btn span:before{
+    top: -6px;
+}
+
+.nav-btn span:after{
+    top: 6px;
+}
+
+/*=====================
+Navigation
+=======================
+*/
+
+.nav-menu{
+    /* display: none; */
+    position:fixed ;
+    background-color: var(--bg-black-50);
+    padding: 0 15px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    width: 100%;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+.close-nav-menu{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    color: var(--text-black-600);
+    transition: all 0.3s ease;
+}
+
+.close-nav-menu:after{
+    border-radius: 50%;
+}
+
+.nav-menu-inner{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu ul{
+  padding: 15px;
+  text-align: center;
+}
+
+.nav-menu ul li{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.nav-menu ul li:last-child{
+    margin-bottom: 0;
+}
+
+.nav-menu ul li a{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    padding: 5px 30px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+
+}
+
+.nav-menu ul li a:after{
+    border-radius:30px;
+}
+
+ ul li a.active{
+   color:  var(--skin-color);
+ }
