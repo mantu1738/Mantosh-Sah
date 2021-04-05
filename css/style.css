@@ -287,6 +287,84 @@ Home section
 =======================
 */
 
+.home{
+    position: relative;
+}
+
+/*****Effects******/
+
+.effect-wrap .effect{
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-1{
+    width: 40px;
+    height: 40px;
+    border: 3px solid #eb7f21;
+    bottom: 10%;
+    right: 10%;
+    animation: spin infinite 3s linear;
+}
+
+.diamond{
+    width: 50px;
+    height: 50px;
+ border: 2px solid rgb(221, 109, 17);
+   transform: rotate(45deg);
+   bottom: 10%;
+   left: 30%;
+   animation: spin infinite linear 3s;
+}
+
+.heart {
+    font-size: 100px;
+    color: rgb(233, 104, 104);
+    right: 50%;
+    bottom: 5%;
+
+    animation: focus infinite alternate 3s;
+}
+
+@keyframes focus{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sub-effect-1{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--skin-color);
+    border-radius: 50%;
+    animation: spinn infinite linear infinite;
+}
+
+@keyframes spinn{
+    0%{
+        transform:rotate3d(360deg) ;
+    }
+
+    100%{
+        transform: rotate3d(0deg);
+    }
+}
+
+
 .home .full-screen{
     padding:50px 0;
     min-height: 100vh;
@@ -322,6 +400,10 @@ color:var(--text-black-700) ;
 margin: 0;
 }
 
+.info .button-1{
+    margin-top: 30px;
+}
+
 
 .profile-img .img-box{
     max-width: 400px;
@@ -334,7 +416,8 @@ margin: 0;
 .profile-img .img-box img{
     width: 100%;
     border-radius: 50%;
-    border: 10px solid var(--skin-color);
+    border: 10px solid transparent;
+    background-color: #8a7b6e;
 }
 
 
