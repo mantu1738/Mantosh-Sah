@@ -20,7 +20,7 @@ Global CSS
 :root{
 --bg-black-900:#696969;
 --bg-black-100:#a9a9a9;
---bg-black-50:#b5b5b5;
+--bg-black-50:#fcfcfc;
 --text-black-900:#2b2929;
 --text-black-700:#555555;
 --text-black-600:#8f8f8f;
@@ -307,33 +307,24 @@ Home section
     animation: spin infinite 3s linear;
 }
 
-.diamond{
-    width: 50px;
-    height: 50px;
- border: 2px solid rgb(221, 109, 17);
-   transform: rotate(45deg);
-   bottom: 10%;
-   left: 30%;
-   animation: spin infinite linear 3s;
-}
 
-.heart {
+/* .heart {
     font-size: 100px;
-    color: rgb(233, 104, 104);
+    color: rgb(236, 69, 69);
     right: 50%;
     bottom: 5%;
 
-    animation: focus infinite alternate 3s;
-}
+    animation: infinite linear 3s;
+} */
 
-@keyframes focus{
+/* @keyframes focus{
     0%{
         transform: scale(0);
     }
     100%{
         transform: scale(1);
     }
-}
+} */
 
 
 @keyframes spin{
@@ -364,7 +355,53 @@ Home section
     }
 }
 
+.effect-2{
+    left: 5%;
+    bottom: 10%;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: space-between;  
+    animation: topBounce 3s ease-in-out infinite;
+}
 
+.effect-2 div{
+    width: 4px;
+    height: 4px;
+    background-color: #FF9C07;
+    margin: 0 3px 8px;
+    border-radius: 50%;
+}
+
+@keyframes topBounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(25px);
+    }
+}
+
+.effect-3{
+    width: 180px;
+    height: 180px;
+    border: 15px solid var(--skin-color);
+    border-radius: 50%;
+    left: 50%;
+    top: -20%;
+    animation: leftBounce infinite 3s ease-in-out;
+}
+
+@keyframes leftBounce{
+    0%,100%{
+        transform: translateX(0);
+    }
+
+    50%{
+        transform: translateX(25px);
+    }
+}
 .home .full-screen{
     padding:50px 0;
     min-height: 100vh;
@@ -417,7 +454,7 @@ margin: 0;
     width: 100%;
     border-radius: 50%;
     border: 10px solid transparent;
-    background-color: #8a7b6e;
+    background-color: #dbc6b1;
 }
 
 
