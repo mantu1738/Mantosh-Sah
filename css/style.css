@@ -511,7 +511,7 @@ About section
 */
 
 .about-section{
-    padding: 80px 0 80px;
+    padding: 80px 0 0px;
     min-height: 100vh;
 }
 
@@ -705,3 +705,81 @@ ul {
   ul li a:hover:nth-child(4) {
     color: #dd4b39;
   }
+
+  /*********About Information about eduction and all*********/
+
+  .about-info2{
+      padding: 60px 15px 50px;
+      flex: 0  100%;
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .about-info-item{
+      display: inline-block;
+      margin:5px 10px;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-black-700);
+      transition: all 0.3s ease;
+  }
+
+  .about-info-item:hover:not(.active){
+      opacity: 0.6;
+  }
+
+  .about-info-item.active{
+     color: var(--skin-color);
+  }
+
+  .Skills{
+      padding: 0 0 40px;
+  }
+
+  .skill-content{
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .Skills .skill-item{
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 15px;
+      margin-bottom: 40px;
+  }
+
+  .skill-item p{
+      font-size: 16px;
+      color: var(--text-black-700);
+      margin:  0px  0 10px;
+      text-transform: capitalize;
+  }
+
+  .skill-item .progress{
+      height: 20px;
+      border-radius: 10px;
+      position: relative;
+  }
+
+  .skill-item .progress-bar{
+      background-color: var(--skin-color);
+      height: 6px;
+      border-radius: 10px;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+
+  }
+
+  .skill-item .progress-bar span{
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--skin-color);
+     margin-top: -40px;
+    }
