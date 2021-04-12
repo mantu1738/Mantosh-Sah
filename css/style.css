@@ -739,7 +739,7 @@ ul {
       padding: 0 0 40px;
   }
 
-  .skill-content{
+  .about-content{
       flex: 0 0 100%;
       max-width: 100%;
   }
@@ -782,4 +782,98 @@ ul {
       font-weight: 500;
       color: var(--skin-color);
      margin-top: -40px;
+    }
+
+    /*********Experience section*************/
+
+    .experience{
+        padding-bottom: 80px;
+    }
+
+    .experience .timeline{
+      flex: 0 0 100%;
+     max-width: 100%;    
+     position: relative;
+    }
+
+    .timeline::before{
+        content: ' ';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        background-color:var(--bg-black-100);
+    }
+.timeline .timeline-item{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+    .timeline .timeline-item:nth-child(odd){
+        padding-right: calc(50% + 50px);
+        text-align: right;
+    }
+    .timeline .timeline-item:nth-child(even){
+        padding-left: calc(50% + 50px);
+        text-align: left;
+    }
+
+    .timeline .timeline-item-inner{
+        padding: 30px;
+       border:5px;
+       position: relative;
+    }
+
+    .timeline-item-inner .icon{
+        height: 40px;
+        width: 40px;
+        color: var(--skin-color);
+        text-align: center;
+        background-color: var(--bg-black-50);
+        border: 1px solid var(--bg-black-100);
+        border-radius: 50%;
+        line-height: 40px;
+        position: absolute;
+        font-size: 25px;
+        top: 18px;       
+    }
+
+    .timeline-item:nth-child(odd) .icon{
+        right: -70px;
+    }
+    .timeline-item:nth-child(even) .icon{
+        left:  -70px;
+    }
+
+    .timeline-item-inner span{
+            font-weight: 500;
+            color: var(--skin-color);
+            display: block;
+            margin: 0 0 10px;
+    }
+
+    .timeline-item-inner h2{
+           font-size: 25px;
+           font-weight: 700;
+           color: var(--text-black-700);
+           margin: 0 0 5px;
+    }
+
+    .timeline-item-inner h3{
+         font-size: 20px;
+         color: var(--text-black-600);
+         font-weight: 600;
+         margin: 0 0 5px;
+    }
+
+    .timeline-item-inner h4{
+       font-size: 16px;
+       font-style: italic;
+       color: var(--text-black-300);
+    }
+
+    .timeline-item-inner p{
+     font-size: 16px;
+     color: ;
     }
