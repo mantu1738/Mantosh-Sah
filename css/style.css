@@ -742,6 +742,11 @@ ul {
   .about-content{
       flex: 0 0 100%;
       max-width: 100%;
+      display: none;
+  }
+
+  .about-content.active{
+          display: block;
   }
 
   .Skills .skill-item{
@@ -786,11 +791,11 @@ ul {
 
     /*********Experience section*************/
 
-    .experience{
+    .experience,.education{
         padding-bottom: 80px;
     }
 
-    .experience .timeline{
+     .timeline{
       flex: 0 0 100%;
      max-width: 100%;    
      position: relative;
@@ -825,14 +830,29 @@ ul {
        position: relative;
     }
 
+    .timeline-item-inner:before{
+        content: ' ';
+        position: absolute;   
+        width: 30px;
+        height: 1px;
+        background-color:var(--text-black-700);
+        z-index: -1;
+        top: 40px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-item-inner:before{
+        right: -30px;
+    }
+    .timeline-item:nth-child(even) .timeline-item-inner:before{
+        left: -30px;
+    }
     .timeline-item-inner .icon{
         height: 40px;
         width: 40px;
         color: var(--skin-color);
         text-align: center;
         background-color: var(--bg-black-50);
-        border: 1px solid var(--bg-black-100);
-        border-radius: 50%;
+        border-radius: 20px;
         line-height: 40px;
         position: absolute;
         font-size: 25px;
@@ -871,9 +891,11 @@ ul {
        font-size: 16px;
        font-style: italic;
        color: var(--text-black-300);
+       font-weight: 500;
     }
 
     .timeline-item-inner p{
      font-size: 16px;
-     color: ;
+     color: var(--text-black-700) ;
+     margin: 5px 0;
     }
