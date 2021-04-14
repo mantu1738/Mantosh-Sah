@@ -527,7 +527,7 @@ About section
     display: inline-block;
     text-transform: uppercase;
     color: var(--text-black-900);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     margin: 0;
 }
@@ -911,3 +911,63 @@ ul {
      color: var(--text-black-700) ;
      margin: 5px 0;
     }
+
+
+     /*=====================
+Services section
+=======================
+*/
+
+.services-section{
+    padding: 20px 0 80px;
+    min-height: 100vh;
+}
+
+.services-section .services-item{
+    flex: 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-item .services-item-inner{
+    padding: 50px 15px;
+    border-radius:5px ;
+    text-align: center;
+}
+
+.services-section .services-item-inner .icon{
+    height: 60px;
+    width: 60px;
+    border-radius:50% ;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+ margin: 0 auto 30px;
+}
+
+.services-section .services-item-inner .icon i{
+    font-size:25px ;
+    line-height: 60px;
+    transition: all 0.3s ease;
+}
+
+.services-item .services-item-inner:hover .icon i{
+    color: var(--skin-color);
+}
+
+.services-section .services-item-inner h3{
+  font-size: 20px;
+  font-weight:600 ;
+  color: var(--text-black-700);
+  margin: 0 0 10px;
+  text-transform: capitalize;
+} 
+.services-section .services-item-inner p{
+    font-size: 16px;
+    color: var(--text-black-600);
+    margin: 0;
+    line-height: 26px;
+
+} 
