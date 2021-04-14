@@ -747,6 +747,18 @@ ul {
 
   .about-content.active{
           display: block;
+          animation: fadeInTop 0.3s ease;
+  }
+
+  @keyframes fadeInTop {
+      0%{
+          opacity: 0;
+          transform: translateY(-30px);
+      }
+      100%{
+          opacity: 0.8;
+          transform: translateY(0);
+      }
   }
 
   .Skills .skill-item{
