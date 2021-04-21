@@ -21,6 +21,7 @@ Global CSS
 --bg-black-900:#696969;
 --bg-black-100:#a9a9a9;
 --bg-black-50:#fcfcfc;
+--bg-opacity:rgba(255,255,255,0.5);
 --text-black-900:#2b2929;
 --text-black-700:#555555;
 --text-black-600:#8f8f8f;
@@ -51,6 +52,10 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
     background-color: var(--bg-black-50);
+}
+
+body.stop-scroll{
+    overflow-y: hidden;
 }
 
 a{
@@ -1028,6 +1033,16 @@ Project showcase section
     flex-wrap: wrap;
 }
 
+.project-section .project-item.hide{
+    display: none;
+}
+
+.project-section .project-item.show{
+    display: block;
+    animation: fadeInTop 0.3s ease;
+}
+
+
 .project-section .project-item-inner{
     padding: 15px;
     border: 5px;
@@ -1087,10 +1102,46 @@ Project showcase section
     left: 0;
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-popup.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-popup .pre-loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: var(--bg-opacity);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.project-popup .pre-loader.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-popup .pre-loader div{
+    width: 40px;
+    height: 40px;
+   border: 3px solid var(--skin-color);
+   border-radius: 50%;
+   border-right: 3px solid transparent;
+   animation: spin 2s linear infinite;
 }
 
 .project-popup .pp-details{
@@ -1100,6 +1151,11 @@ Project showcase section
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-popup .pp-details.active{
+    opacity: 1;
 }
 
 .project-popup .pp-details-inner{
@@ -1167,6 +1223,7 @@ Project showcase section
 .project-popup .info ul li span a {
     font-size: 14px;
     margin-left: 1%;
+    color: var(--skin-color);
 }
 
 .project-popup .info ul li:last-child{
