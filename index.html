@@ -14,6 +14,14 @@
   <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
   <!-- main css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="./css/skins/color-1.css">
+  <!------------Theme Colors Switcher---------->
+  <link rel="stylesheet" href="./css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="./css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="./css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="./css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="./css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="./css/style-switcher.css">
   <!------ANIMATE-------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
@@ -94,7 +102,7 @@
   </div>
   <!----------------------Navigation Ends----------------------------->
   <!----------------------Home section-------------------------------->
-  <section id="section home  active" id="home">
+  <section class="section home-section active" id="home">
     <!-----Shapes Effect---->
     <div class="effect-wrap">
       <div class="effect effect-1">
@@ -227,7 +235,7 @@
           <p class="quote">If Internet Explorer is brave enough to ask to be your default browser, You are brave enough
             to ask that girl out.</p>
           <a href="#" class="outer-shadow button-1 button-2  hover-in-out">Download CV</a>
-          <a href="#" class="link-item outer-shadow button-1 button-2 hover-in-out">Hire Me</a>
+          <a href="#contact" class="link-item outer-shadow button-1 button-2 hover-in-out">Hire Me</a>
         </div>
       </div>
       <div class="row">
@@ -976,6 +984,25 @@
     </div>
   </section>
   <!---------------------------Contact Page Ends----------------------------->
+
+  <!-----------Style chnage-------------->
+  <div class="style-switcher  outer-shadow">
+    <div class="style-toggler s-icon outer-shadow hover-in-out">
+      <em class="fas fa-cog fa-spin"></em>
+    </div>
+    <div class="day-night s-icon outer-shadow hover-in-out">
+      <em class="fas "></em>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-----------Style chnage Ends-------------->
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"

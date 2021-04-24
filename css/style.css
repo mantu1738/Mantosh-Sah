@@ -1,4 +1,4 @@
-@import url(./skins/color-1.css);
+/* @import url(./skins/color-1.css); */
 /* @import url(./skins/color-2.css);
 @import url(./skins/color-3.css);
 @import url(./skins/color-4.css);
@@ -46,6 +46,23 @@ Global CSS
 :before, :after{
     box-sizing: border-box;
 }
+
+/********Override the light color to dark mode**********/
+
+body.dark{
+    --bg-black-900:#fffffff;
+--bg-black-100:#353535;
+--bg-black-50:#2b222f;
+--bg-opacity:rgba(43,44,47,0.5);
+--text-black-900:#ffffff;
+--text-black-700:#ffffff;
+--text-black-600:#bbbbbb;
+--text-black-300:#bbbbbb;
+--outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+--outer-shadow-0:0px 0px 0px #222327, 0px 0px 0px #363636;
+--inner-shadow:inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+}
+
 
 body{
     font-size: 16px;
@@ -188,7 +205,7 @@ Header
     display: block;
     height: 2px;
     width: 16px;
-    background-color: var(--bg-black-900);
+    background-color: var(--text-black-900);
     position: relative;
 }
 
@@ -199,7 +216,7 @@ Header
      left:0;
      width:100%;
      height:100%;
-     background-color: var(--bg-black-900);
+     background-color: var(--text-black-900);
 
 }
 .nav-btn span:before{
@@ -333,8 +350,10 @@ Home section
 =======================
 */
 
-.home{
+.home-section{
     position: relative;
+    padding: 80px 0 80px;
+    min-height: 100vh;
 }
 
 /*****Effects******/
@@ -347,7 +366,7 @@ Home section
 .effect-1{
     width: 40px;
     height: 40px;
-    border: 3px solid #eb7f21;
+    border: 3px solid var(--skin-color);
     bottom: 10%;
     right: 10%;
     animation: spin infinite 3s linear;
@@ -414,7 +433,7 @@ Home section
 .effect-2 div{
     width: 4px;
     height: 4px;
-    background-color: #FF9C07;
+    background-color: var(--skin-color);
     margin: 0 3px 8px;
     border-radius: 50%;
 }
@@ -481,14 +500,14 @@ animation: fromUP 3s   ease-in;
 }
 
 
-@keyframes fromUP{
+/* @keyframes fromUP{
     0%,100%{
         transform: translatey(0px);
     }
     50%{
         transform: translatey(-300px);
     }
-}
+} */
 
 .info h1 span{
     color: var(--skin-color);
@@ -503,14 +522,14 @@ margin: 0;
 animation: left 3s ease-in;
 }
 
-@keyframes left{
+/* @keyframes left{
     0%{
         transform: translateX(-300px);
     }
     50%{
         transform: translateX(300px);
     }
-}
+} */
 
 .info .button-1{
     margin-top: 30px;
@@ -539,12 +558,14 @@ animation: left 3s ease-in;
 span.typed{
     font-weight: 500;
     color: var(--skin-color);
+    transition: all 0.3s ease-in ;
 }
 
 span.typed:before{
     content: "Web Developer";
     animation: animate infinite 3s ;
     padding-left:10px;
+    transition: all 0.3s ease-in ;
 }
 
 @keyframes animate{
@@ -566,7 +587,7 @@ About section
 */
 
 .about-section{
-    padding: 80px 0 0px;
+    padding: 80px 0 80px;
     min-height: 100vh;
 }
 
@@ -1000,6 +1021,7 @@ Services section
     transition: all 0.3s ease;
     display: block;
  margin: 0 auto 30px;
+ color: var(--text-black-700);
 }
 
 .services-section .services-item-inner .icon i{

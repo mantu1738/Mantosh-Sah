@@ -46,6 +46,24 @@
 
             navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-out");
             navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+             if(navMenu.classList.contains("show")){
+            e.target.classList.add("active", "inner-shadow");
+            e.target.classList.remove("outer-shadow", "hover-in-out");
+            closeNavMenu();
+             }
+             else{
+                let navItems = navMenu.querySelectorAll(".link-item");
+                navItems.forEach((item)=>{
+                    if(hash===item.hash){
+                    item.classList.add("active", "inner-shadow");
+                    item.classList.remove("outer-shadow", "hover-in-out");
+                    }
+                });
+                fadeOutEffect();
+             }
+
+             // add hsah to the window 
+             window.location.hash=hash;
         }
     }
   });
