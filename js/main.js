@@ -1,3 +1,57 @@
+
+/***************Navigation Menu********************** */
+
+(()=>{
+      const navBtn = document.querySelector(".nav-btn");
+      const navMenu = document.querySelector(".nav-menu");
+      const closeNavBtn = document.querySelector(".close-nav-menu");
+    //   console.log(navMenu);
+
+    navBtn.addEventListener("click", showNavMenu);
+    closeNavBtn.addEventListener("click", closeNavMenu);
+
+    function showNavMenu(){
+          navMenu.classList.add("show");
+          bodyScrollingToggle();
+    }
+    
+    function closeNavMenu(){
+        navMenu.classList.remove("show");
+        fadeOutEffect();
+        bodyScrollingToggle();
+  }
+
+  function fadeOutEffect(){
+      document.querySelector(".fade-out-effect").classList.add("active");
+      setTimeout( ( )=>{
+        document.querySelector(".fade-out-effect").classList.remove("active");
+      },300 )
+  }
+
+  /********add an event handler to document ********** */
+  document.addEventListener("click", (e)=>{
+    // console.log(e.target);
+    if(e.target.classList.contains("link-item")){
+
+        if(e.target.hash !==" "){
+              e.preventDefault();
+              const hash = e.target.hash;
+            //   console.log(hash);
+
+            document.querySelector(".section.active").classList.add("hide");
+            document.querySelector(".section.active").classList.remove("active");
+
+            document.querySelector(hash).classList.add("active");
+            document.querySelector(hash).classList.remove("hide");
+
+            navMenu.querySelector(".active").classList.add("outer-shadow","hover-in-out");
+            navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
+        }
+    }
+  });
+})();
+
+
 /*************Change the about tabs***************** */
 
 
@@ -207,4 +261,17 @@ function bodyScrollingToggle(){
             }
            }
            
+})();
+
+/**************hide all sections expect active ***************** */
+
+( ()=>{
+       const sections = document.querySelectorAll(".section");
+    //    console.log(sections);
+
+    sections.forEach((section)=>{
+         if(!section.classList.contains("active")){
+             section.classList.add("hide");
+         }
+    });
 })();
