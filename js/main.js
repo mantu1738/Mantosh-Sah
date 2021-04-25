@@ -283,13 +283,13 @@ function bodyScrollingToggle(){
 
 /**************hide all sections expect active ***************** */
 
-( ()=>{
-       const sections = document.querySelectorAll(".section");
-    //    console.log(sections);
+// ( ()=>{
+//        const sections = document.querySelectorAll(".section");
+//     //    console.log(sections);
 
-    sections.forEach((section)=>{
-         if(!section.classList.contains("active")){
-             section.classList.add("hide");
-         }
-    });
-})();
+//     sections.forEach((section)=>{
+//          if(!section.classList.contains("active")){
+//              section.classList.add("hide");
+//          }
+//     });
+// })();

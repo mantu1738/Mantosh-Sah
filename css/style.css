@@ -663,13 +663,15 @@ About section
 
 .social-links{
     margin-top: 25px;
-    max-width: 40%;
+    max-width: 100%;
 }
 
 .social{
     margin:0;
     padding:0;
     display:flex;
+    align-items: center;
+    justify-content: center;
   }
   .social .links {
     list-style:none;
@@ -903,6 +905,7 @@ About section
     max-width: 100%;
 }
 
+
     .timeline .timeline-item:nth-child(odd){
         padding-right: calc(50% + 50px);
         text-align: right;
@@ -916,6 +919,9 @@ About section
         padding: 30px;
        border:5px;
        position: relative;
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
     }
 
     .timeline-item-inner:before{
@@ -995,7 +1001,7 @@ Services section
 */
 
 .services-section{
-    padding: 20px 0 80px;
+    padding: 80px 0 80px;
     min-height: 100vh;
 }
 
@@ -1011,6 +1017,9 @@ Services section
     padding: 50px 15px;
     border-radius:5px ;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .services-section .services-item-inner .icon{
